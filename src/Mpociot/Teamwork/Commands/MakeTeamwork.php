@@ -3,12 +3,12 @@
 namespace Mpociot\Teamwork\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Console\DetectsApplicationNamespace;
+//use Illuminate\Console\DetectsApplicationNamespace;
 
 class MakeTeamwork extends Command
 {
 
-    use DetectsApplicationNamespace;
+    //use DetectsApplicationNamespace;
 
     /**
      * The name and signature of the console command.
@@ -49,7 +49,7 @@ class MakeTeamwork extends Command
      */
     public function handle()
     {
-        $this->createDirectories();
+        /*$this->createDirectories();
 
         $this->exportViews();
         
@@ -90,7 +90,7 @@ class MakeTeamwork extends Command
                 FILE_APPEND
             );
         }
-        $this->comment('Teamwork scaffolding generated successfully!');
+        $this->comment('Teamwork scaffolding generated successfully!');*/
     }
 
     /**
@@ -139,10 +139,10 @@ class MakeTeamwork extends Command
      */
     protected function compileControllerStub($stubName)
     {
-        return str_replace(
+        /*return str_replace(
             '{{namespace}}',
             $this->getAppNamespace(),
             file_get_contents(__DIR__.'/../../../stubs/controllers/'.$stubName.'.stub')
-        );
+        );*/
     }
 }
